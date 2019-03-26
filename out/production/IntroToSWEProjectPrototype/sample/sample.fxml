@@ -1,0 +1,1451 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane stylesheets="@../dark-theme.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <ImageView id="backgroundImage" cache="true" fitHeight="589.0" fitWidth="1269.0" layoutX="16.0" layoutY="106.0" pickOnBounds="true" StackPane.alignment="CENTER">
+         <image>
+            <Image url="@../images/background.jpg" />
+         </image>
+         <StackPane.margin>
+            <Insets top="65.0" />
+         </StackPane.margin>
+         <effect>
+            <ColorAdjust brightness="-0.2">
+               <input>
+                  <GaussianBlur radius="3.0">
+                     <input>
+                        <DropShadow />
+                     </input>
+                  </GaussianBlur>
+               </input>
+            </ColorAdjust>
+         </effect>
+      </ImageView>
+      <ImageView id="backgroundImage" cache="true" fitHeight="589.0" fitWidth="1269.0" layoutX="16.0" layoutY="108.0" opacity="0.5" pickOnBounds="true">
+         <image>
+            <Image url="@../images/PizzaBackground.jpg" />
+         </image>
+         <effect>
+            <ColorAdjust brightness="-0.7">
+               <input>
+                  <GaussianBlur radius="3.0" />
+               </input>
+            </ColorAdjust>
+         </effect>
+         <StackPane.margin>
+            <Insets top="65.0" />
+         </StackPane.margin>
+      </ImageView>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0">
+         <bottom>
+            <ToolBar prefHeight="22.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <items>
+                  <Label text="version 1.0" />
+               </items>
+            </ToolBar>
+         </bottom>
+         <center>
+            <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" tabMinWidth="230.0" BorderPane.alignment="CENTER">
+              <tabs>
+                <Tab>
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="580.0" prefWidth="1280.0">
+                                 <children>
+                                    <VBox alignment="TOP_CENTER" prefHeight="580.0" prefWidth="298.0" spacing="10.0">
+                                       <padding>
+                                          <Insets bottom="20.0" left="10.0" right="10.0" top="20.0" />
+                                       </padding>
+                                       <children>
+                                          <Label text="Specialty Pizzas" textFill="WHITE" underline="true">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox alignment="CENTER" prefHeight="514.0" prefWidth="352.0">
+                                             <children>
+                                                <VBox prefHeight="530.0" prefWidth="145.0">
+                                                   <children>
+                                                      <VBox prefHeight="75.0" prefWidth="194.0">
+                                                         <children>
+                                                            <Label text="Deluxe" textFill="WHITE" underline="true">
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label text="- Pizza Cheese" textFill="WHITE" />
+                                                            <Label layoutX="20.0" layoutY="52.0" text="- Pizza Sauce" textFill="WHITE" />
+                                                            <Label layoutX="20.0" layoutY="77.0" text="- Sausage" textFill="WHITE" />
+                                                            <Label layoutX="10.0" layoutY="72.0" text="- Pepperoni" textFill="WHITE" />
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox prefHeight="101.0" prefWidth="194.0">
+                                                         <children>
+                                                            <Label text="Meat Lovers" textFill="WHITE" underline="true">
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label text="- Pizza Cheese" textFill="WHITE" />
+                                                            <Label layoutX="20.0" layoutY="52.0" text="- Pizza Sauce" textFill="WHITE" />
+                                                            <Label layoutX="20.0" layoutY="77.0" text="- Ham" textFill="WHITE" />
+                                                            <Label layoutX="20.0" layoutY="102.0" text="- Sausage" textFill="WHITE" />
+                                                            <Label layoutX="20.0" layoutY="127.0" text="- Beef" textFill="WHITE" />
+                                                            <Label layoutX="20.0" layoutY="152.0" text="- Pepperoni" textFill="WHITE" />
+                                                            <Label layoutX="10.0" layoutY="137.0" text="- Bacon" textFill="WHITE" />
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox layoutX="10.0" layoutY="10.0" prefHeight="106.0" prefWidth="194.0">
+                                                         <children>
+                                                            <Label text="Supreme" textFill="WHITE" underline="true">
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label text="- Pizza Cheese" textFill="WHITE" />
+                                                            <Label layoutX="20.0" layoutY="52.0" text="- Pizza Sauce" textFill="WHITE" />
+                                                            <Label layoutX="20.0" layoutY="77.0" text="- Ham" textFill="WHITE" />
+                                                            <Label layoutX="20.0" layoutY="102.0" text="- Sausage" textFill="WHITE" />
+                                                            <Label layoutX="20.0" layoutY="127.0" text="- Beef" textFill="WHITE" />
+                                                            <Label layoutX="20.0" layoutY="152.0" text="- Pepperoni" textFill="WHITE" />
+                                                            <Label layoutX="10.0" layoutY="137.0" text="- Olives" textFill="WHITE" />
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox prefHeight="75.0" prefWidth="194.0">
+                                                         <children>
+                                                            <Label text="BBQ Chicken" textFill="WHITE" underline="true">
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label text="- Pizza Cheese" textFill="WHITE" />
+                                                            <Label layoutX="20.0" layoutY="52.0" text="- Provolone Cheese" textFill="WHITE" />
+                                                            <Label layoutX="20.0" layoutY="77.0" text="- Cheddar Cheese" textFill="WHITE" />
+                                                            <Label layoutX="10.0" layoutY="72.0" text="- Grilled Chicken" textFill="WHITE" />
+                                                            <Label layoutX="10.0" layoutY="90.0" text="- BBQ Sauce" textFill="WHITE" />
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                </VBox>
+                                                <VBox layoutX="120.0" layoutY="10.0" prefHeight="530.0" prefWidth="145.0">
+                                                   <children>
+                                                      <VBox layoutX="10.0" layoutY="10.0" prefHeight="101.0" prefWidth="194.0">
+                                                         <children>
+                                                            <Label text="Hawaiian" textFill="WHITE" underline="true">
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label text="- Pizza Cheese" textFill="WHITE" />
+                                                            <Label layoutX="20.0" layoutY="52.0" text="- Provolone Cheese" textFill="WHITE" />
+                                                            <Label layoutX="20.0" layoutY="77.0" text="- Pizza Sauce" textFill="WHITE" />
+                                                            <Label layoutX="10.0" layoutY="72.0" text="- Ham" textFill="WHITE" />
+                                                            <Label layoutX="10.0" layoutY="90.0" text="- Bacon" textFill="WHITE" />
+                                                            <Label layoutX="10.0" layoutY="108.0" text="- Pineapple" textFill="WHITE" />
+                                                            <Label layoutX="10.0" layoutY="125.0" text="- Red Peppers" textFill="WHITE" />
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox layoutX="10.0" layoutY="90.0" prefHeight="75.0" prefWidth="194.0">
+                                                         <children>
+                                                            <Label text="Buffalo Chicken" textFill="WHITE" underline="true">
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label text="- Provolone Cheese" textFill="WHITE" />
+                                                            <Label layoutX="20.0" layoutY="52.0" text="- American Cheese" textFill="WHITE" />
+                                                            <Label layoutX="20.0" layoutY="77.0" text="- Cheddar Cheese" textFill="WHITE" />
+                                                            <Label layoutX="10.0" layoutY="72.0" text="- Grilled Chicken" textFill="WHITE" />
+                                                            <Label layoutX="10.0" layoutY="90.0" text="- Buffalo Sauce" textFill="WHITE" />
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox prefHeight="138.0" prefWidth="194.0">
+                                                         <children>
+                                                            <Label text="Veggie" textFill="WHITE" underline="true">
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label text="- Provolone Cheese" textFill="WHITE" />
+                                                            <Label layoutX="10.0" layoutY="37.0" text="- Pizza Cheese" textFill="WHITE" />
+                                                            <Label layoutX="10.0" layoutY="57.0" text="- Feta Cheese" textFill="WHITE" />
+                                                            <Label layoutX="20.0" layoutY="52.0" text="- Pizza Sauce" textFill="WHITE" />
+                                                            <Label layoutX="20.0" layoutY="77.0" text="- Red Peppers" textFill="WHITE" />
+                                                            <Label layoutX="20.0" layoutY="102.0" text="- Diced Tomatoes" textFill="WHITE" />
+                                                            <Label layoutX="20.0" layoutY="127.0" text="- Olives" textFill="WHITE" />
+                                                            <Label layoutX="20.0" layoutY="152.0" text="- Garling and Herb Shake" textFill="WHITE" />
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox prefHeight="49.0" prefWidth="194.0">
+                                                         <children>
+                                                            <Label text="Philly" textFill="WHITE" underline="true">
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label text="- Provolone Cheese" textFill="WHITE" />
+                                                            <Label layoutX="20.0" layoutY="52.0" text="- American Cheese" textFill="WHITE" />
+                                                            <Label layoutX="20.0" layoutY="77.0" text="- Philly Meat" textFill="WHITE" />
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="TOP_CENTER" prefHeight="580.0" prefWidth="282.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Specialty Pizza Pricing" textFill="WHITE" underline="true">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <GridPane alignment="CENTER" prefHeight="93.0" prefWidth="262.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="115.59998321533203" minWidth="10.0" prefWidth="76.4666259765625" />
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="130.66661376953124" minWidth="28.933341979980455" prefWidth="52.73337402343749" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="195.60002899169922" minWidth="10.0" prefWidth="61.20000000000002" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="246.73333740234375" minWidth="10.0" prefWidth="68.73337402343748" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Label text="Small" textFill="WHITE" GridPane.columnIndex="1">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="Medium" textFill="WHITE" GridPane.columnIndex="2">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="Large" textFill="WHITE" GridPane.columnIndex="3">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="Thin" textFill="WHITE" GridPane.rowIndex="1">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="Hand Toss" textFill="WHITE" GridPane.rowIndex="2">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="Pan" textFill="WHITE" GridPane.rowIndex="3">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="\$7.00" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="\$9.00" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="\$11.00" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="\$10.00" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="\$12.00" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="\$14.00" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="\$13.00" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="\$15.00" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="\$17.00" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </padding>
+                                          </GridPane>
+                                          <Label layoutX="35.0" layoutY="20.0" text="Custom Pizza" textFill="WHITE" underline="true">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <VBox prefHeight="150.0" prefWidth="209.0">
+                                             <children>
+                                                <Label text="Toppings" textFill="WHITE" underline="true">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="- Includes Pizza Cheese and Sauce" textFill="WHITE" />
+                                                <Label layoutX="20.0" layoutY="52.0" text="- Pepperoni" textFill="WHITE" />
+                                                <Label layoutX="20.0" layoutY="77.0" text="- Mushrooms" textFill="WHITE" />
+                                                <Label layoutX="20.0" layoutY="102.0" text="- Onions" textFill="WHITE" />
+                                                <Label layoutX="20.0" layoutY="127.0" text="- Sausage" textFill="WHITE" />
+                                                <Label layoutX="20.0" layoutY="152.0" text="- Bacon" textFill="WHITE" />
+                                                <Label layoutX="10.0" layoutY="137.0" text="- Extra Cheese" textFill="WHITE" />
+                                                <Label layoutX="10.0" layoutY="143.0" text="- Olives" textFill="WHITE" />
+                                                <Label layoutX="10.0" layoutY="160.0" text="- Green Peppers" textFill="WHITE" />
+                                             </children>
+                                          </VBox>
+                                          <Label layoutX="35.0" layoutY="20.0" text="Custom Pizza Pricing" textFill="WHITE" underline="true">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <GridPane alignment="CENTER" layoutX="20.0" layoutY="66.0" prefHeight="94.0" prefWidth="262.0">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="115.59998321533203" minWidth="10.0" prefWidth="76.4666259765625" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="130.66661376953124" minWidth="28.933341979980455" prefWidth="52.73337402343749" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="195.60002899169922" minWidth="10.0" prefWidth="61.20000000000002" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="246.73333740234375" minWidth="10.0" prefWidth="68.73337402343748" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <Label text="Small" textFill="WHITE" GridPane.columnIndex="1">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="Medium" textFill="WHITE" GridPane.columnIndex="2">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="Large" textFill="WHITE" GridPane.columnIndex="3">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="Thin" textFill="WHITE" GridPane.rowIndex="1">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="Hand Toss" textFill="WHITE" GridPane.rowIndex="2">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="Pan" textFill="WHITE" GridPane.rowIndex="3">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="\$5.00" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="\$7.00" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="\$9.00" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="\$8.00" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="\$10.00" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="\$12.00" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="\$11.00" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="\$13.00" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="\$15.00" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </padding>
+                                          </GridPane>
+                                          <VBox prefHeight="0.0" prefWidth="262.0">
+                                             <children>
+                                                <Label text="+ $1.00 per Topping" textFill="WHITE" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                       <padding>
+                                          <Insets bottom="20.0" left="10.0" right="10.0" top="20.0" />
+                                       </padding>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                     <graphic>
+                        <Label text="Home">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Label>
+                     </graphic>
+                </Tab>
+                <Tab>
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox prefHeight="608.0" prefWidth="411.0" spacing="5.0">
+                                 <children>
+                                    <HBox prefHeight="344.0" prefWidth="415.0">
+                                       <children>
+                                          <VBox alignment="CENTER_LEFT" prefHeight="198.0" prefWidth="163.0" spacing="10.0">
+                                             <children>
+                                                <Label layoutX="20.0" layoutY="36.0" text="Phone:" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="Name:" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="Street:" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="City:" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="State:" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="Card Number:" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="20.0" layoutY="221.0" text="Exp Date:" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="20.0" layoutY="240.0" text="CVC:" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="20.0" layoutY="281.0" text="Order Type:" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </padding>
+                                          </VBox>
+                                          <VBox alignment="CENTER" prefHeight="198.0" prefWidth="237.0" spacing="12.0">
+                                             <padding>
+                                                <Insets bottom="10.0" top="10.0" />
+                                             </padding>
+                                             <children>
+                                                <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                                                   <children>
+                                                      <TextField fx:id="phoneNumber" prefHeight="26.0" prefWidth="181.0" promptText="(123) 456-7890" />
+                                                      <Button fx:id="Check" mnemonicParsing="false" text="Check" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox spacing="10.0">
+                                                   <children>
+                                                      <TextField fx:id="firstName" promptText="First Name" />
+                                                      <TextField fx:id="lastName" layoutX="10.0" layoutY="10.0" promptText="Last Name" />
+                                                   </children>
+                                                </HBox>
+                                                <TextField fx:id="Street" promptText="123 College St" />
+                                                <ChoiceBox fx:id="City" prefHeight="26.0" prefWidth="276.0" />
+                                                <ChoiceBox fx:id="State" prefHeight="26.0" prefWidth="255.0" />
+                                                <TextField fx:id="ccNum" promptText="1111 2222 3333 4444" />
+                                                <HBox spacing="10.0">
+                                                   <children>
+                                                      <ChoiceBox fx:id="expMonth" prefWidth="150.0" />
+                                                      <ChoiceBox fx:id="expYear" layoutX="10.0" layoutY="10.0" prefWidth="150.0" />
+                                                   </children>
+                                                </HBox>
+                                                <TextField fx:id="CVC" layoutX="10.0" layoutY="208.0" promptText="123" />
+                                                <ChoiceBox fx:id="orderType" layoutX="10.0" layoutY="168.0" prefHeight="26.0" prefWidth="255.0" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <VBox alignment="CENTER" prefHeight="489.0" prefWidth="392.0">
+                                       <children>
+                                          <Label text="Note for Chef and Driver" textFill="WHITE" underline="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextArea fx:id="noteTextArea" prefHeight="473.0" prefWidth="196.0" promptText="Enter note if needed" wrapText="true">
+                                             <padding>
+                                                <Insets bottom="1.0" left="1.0" right="35.0" top="1.0" />
+                                             </padding>
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                          </TextArea>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox alignment="CENTER" layoutX="417.0" layoutY="6.0" prefHeight="604.0" prefWidth="858.0">
+                                 <children>
+                                    <Label text="Specialty Pizzas" textFill="WHITE" underline="true">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                                       <children>
+                                          <VBox alignment="CENTER_LEFT" prefHeight="142.0" prefWidth="201.0">
+                                             <children>
+                                                <CheckBox fx:id="meatLovers" mnemonicParsing="false" onAction="#handleCheckBox" text="Meat Lovers" textFill="WHITE" underline="true">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </CheckBox>
+                                                <HBox fx:id="meatLoversHBox" disable="true" prefHeight="96.0" prefWidth="164.0">
+                                                   <children>
+                                                      <VBox alignment="CENTER_LEFT" prefHeight="105.0" prefWidth="82.0" spacing="10.0">
+                                                         <children>
+                                                            <Label text="Crust Size" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="48.0" layoutY="37.0" text="Crust Type" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="27.0" layoutY="86.0" text="Quantity" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                         <padding>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </padding>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER" prefHeight="105.0" prefWidth="113.0" spacing="5.0">
+                                                         <children>
+                                                            <ChoiceBox fx:id="mlSize" prefWidth="150.0" />
+                                                            <ChoiceBox fx:id="mlType" prefWidth="150.0" />
+                                                            <ChoiceBox fx:id="mlQnty" layoutX="10.0" layoutY="48.0" prefWidth="150.0" />
+                                                         </children>
+                                                         <padding>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </padding>
+                                                      </VBox>
+                                                   </children>
+                                                   <effect>
+                                                      <GaussianBlur />
+                                                   </effect>
+                                                </HBox>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </padding>
+                                          </VBox>
+                                          <VBox alignment="CENTER_LEFT" layoutX="333.0" layoutY="10.0" prefHeight="142.0" prefWidth="201.0">
+                                             <children>
+                                                <CheckBox fx:id="Supreme" mnemonicParsing="false" onAction="#handleCheckBox" text="Supreme" textFill="WHITE" underline="true">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </CheckBox>
+                                                <HBox fx:id="supremeHBox" disable="true" prefHeight="96.0" prefWidth="164.0">
+                                                   <children>
+                                                      <VBox alignment="CENTER_LEFT" prefHeight="105.0" prefWidth="82.0" spacing="10.0">
+                                                         <children>
+                                                            <Label text="Crust Size" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="48.0" layoutY="37.0" text="Crust Type" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="27.0" layoutY="86.0" text="Quantity" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                         <padding>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </padding>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER" prefHeight="105.0" prefWidth="113.0" spacing="5.0">
+                                                         <children>
+                                                            <ChoiceBox fx:id="sSize" prefWidth="150.0" />
+                                                            <ChoiceBox fx:id="sType" prefWidth="150.0" />
+                                                            <ChoiceBox fx:id="sQnty" layoutX="10.0" layoutY="48.0" prefWidth="150.0" />
+                                                         </children>
+                                                         <padding>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </padding>
+                                                      </VBox>
+                                                   </children>
+                                                   <effect>
+                                                      <GaussianBlur />
+                                                   </effect>
+                                                </HBox>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </padding>
+                                          </VBox>
+                                          <VBox alignment="CENTER_LEFT" layoutX="452.0" layoutY="10.0" prefHeight="142.0" prefWidth="201.0">
+                                             <children>
+                                                <CheckBox fx:id="Veggie" mnemonicParsing="false" onAction="#handleCheckBox" text="Veggie" textFill="WHITE" underline="true">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </CheckBox>
+                                                <HBox fx:id="VeggieHBox" disable="true" prefHeight="96.0" prefWidth="164.0">
+                                                   <children>
+                                                      <VBox alignment="CENTER_LEFT" prefHeight="105.0" prefWidth="82.0" spacing="10.0">
+                                                         <children>
+                                                            <Label text="Crust Size" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="48.0" layoutY="37.0" text="Crust Type" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="27.0" layoutY="86.0" text="Quantity" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                         <padding>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </padding>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER" prefHeight="105.0" prefWidth="113.0" spacing="5.0">
+                                                         <children>
+                                                            <ChoiceBox fx:id="vSize" prefWidth="150.0" />
+                                                            <ChoiceBox fx:id="vType" prefWidth="150.0" />
+                                                            <ChoiceBox fx:id="vQnty" layoutX="10.0" layoutY="48.0" prefWidth="150.0" />
+                                                         </children>
+                                                         <padding>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </padding>
+                                                      </VBox>
+                                                   </children>
+                                                   <effect>
+                                                      <GaussianBlur />
+                                                   </effect>
+                                                </HBox>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </padding>
+                                          </VBox>
+                                          <VBox alignment="CENTER_LEFT" layoutX="571.0" layoutY="10.0" prefHeight="142.0" prefWidth="201.0">
+                                             <children>
+                                                <CheckBox fx:id="Philly" mnemonicParsing="false" onAction="#handleCheckBox" text="Philly" textFill="WHITE" underline="true">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </CheckBox>
+                                                <HBox fx:id="PhillyHBox" disable="true" prefHeight="96.0" prefWidth="164.0">
+                                                   <children>
+                                                      <VBox alignment="CENTER_LEFT" prefHeight="105.0" prefWidth="82.0" spacing="10.0">
+                                                         <children>
+                                                            <Label text="Crust Size" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="48.0" layoutY="37.0" text="Crust Type" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="27.0" layoutY="86.0" text="Quantity" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                         <padding>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </padding>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER" prefHeight="105.0" prefWidth="113.0" spacing="5.0">
+                                                         <children>
+                                                            <ChoiceBox fx:id="pSize" prefWidth="150.0" />
+                                                            <ChoiceBox fx:id="pType" prefWidth="150.0" />
+                                                            <ChoiceBox fx:id="pQnty" layoutX="10.0" layoutY="48.0" prefWidth="150.0" />
+                                                         </children>
+                                                         <padding>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </padding>
+                                                      </VBox>
+                                                   </children>
+                                                   <effect>
+                                                      <GaussianBlur />
+                                                   </effect>
+                                                </HBox>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </padding>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="15.0" layoutY="103.0" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                                       <children>
+                                          <VBox alignment="CENTER_LEFT" prefHeight="142.0" prefWidth="201.0">
+                                             <children>
+                                                <CheckBox fx:id="Hawaiian" mnemonicParsing="false" onAction="#handleCheckBox" text="Hawaiian" textFill="WHITE" underline="true">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </CheckBox>
+                                                <HBox fx:id="HawaiianHBox" disable="true" prefHeight="96.0" prefWidth="164.0">
+                                                   <children>
+                                                      <VBox alignment="CENTER_LEFT" prefHeight="105.0" prefWidth="82.0" spacing="10.0">
+                                                         <children>
+                                                            <Label text="Crust Size" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="48.0" layoutY="37.0" text="Crust Type" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="27.0" layoutY="86.0" text="Quantity" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                         <padding>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </padding>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER" prefHeight="105.0" prefWidth="113.0" spacing="5.0">
+                                                         <children>
+                                                            <ChoiceBox fx:id="hSize" prefWidth="150.0" />
+                                                            <ChoiceBox fx:id="hType" prefWidth="150.0" />
+                                                            <ChoiceBox fx:id="hQnty" layoutX="10.0" layoutY="48.0" prefWidth="150.0" />
+                                                         </children>
+                                                         <padding>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </padding>
+                                                      </VBox>
+                                                   </children>
+                                                   <effect>
+                                                      <GaussianBlur />
+                                                   </effect>
+                                                </HBox>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </padding>
+                                          </VBox>
+                                          <VBox alignment="CENTER_LEFT" layoutX="333.0" layoutY="10.0" prefHeight="142.0" prefWidth="201.0">
+                                             <children>
+                                                <CheckBox fx:id="buffaloChicken" mnemonicParsing="false" onAction="#handleCheckBox" text="Buffalo Chicken" textFill="WHITE" underline="true">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </CheckBox>
+                                                <HBox fx:id="buffaloChickenHBox" disable="true" prefHeight="96.0" prefWidth="164.0">
+                                                   <children>
+                                                      <VBox alignment="CENTER_LEFT" prefHeight="105.0" prefWidth="82.0" spacing="10.0">
+                                                         <children>
+                                                            <Label text="Crust Size" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="48.0" layoutY="37.0" text="Crust Type" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="27.0" layoutY="86.0" text="Quantity" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                         <padding>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </padding>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER" prefHeight="105.0" prefWidth="113.0" spacing="5.0">
+                                                         <children>
+                                                            <ChoiceBox fx:id="bcSize" prefWidth="150.0" />
+                                                            <ChoiceBox fx:id="bcType" prefWidth="150.0" />
+                                                            <ChoiceBox fx:id="bcQnty" layoutX="10.0" layoutY="48.0" prefWidth="150.0" />
+                                                         </children>
+                                                         <padding>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </padding>
+                                                      </VBox>
+                                                   </children>
+                                                   <effect>
+                                                      <GaussianBlur />
+                                                   </effect>
+                                                </HBox>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </padding>
+                                          </VBox>
+                                          <VBox alignment="CENTER_LEFT" layoutX="452.0" layoutY="10.0" prefHeight="142.0" prefWidth="201.0">
+                                             <children>
+                                                <CheckBox fx:id="Deluxe" mnemonicParsing="false" onAction="#handleCheckBox" text="Deluxe" textFill="WHITE" underline="true">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </CheckBox>
+                                                <HBox fx:id="DeluxeHBox" disable="true" prefHeight="96.0" prefWidth="164.0">
+                                                   <children>
+                                                      <VBox alignment="CENTER_LEFT" prefHeight="105.0" prefWidth="82.0" spacing="10.0">
+                                                         <children>
+                                                            <Label text="Crust Size" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="48.0" layoutY="37.0" text="Crust Type" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="27.0" layoutY="86.0" text="Quantity" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                         <padding>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </padding>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER" prefHeight="105.0" prefWidth="113.0" spacing="5.0">
+                                                         <children>
+                                                            <ChoiceBox fx:id="dSize" prefWidth="150.0" />
+                                                            <ChoiceBox fx:id="dType" prefWidth="150.0" />
+                                                            <ChoiceBox fx:id="dQnty" layoutX="10.0" layoutY="48.0" prefWidth="150.0" />
+                                                         </children>
+                                                         <padding>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </padding>
+                                                      </VBox>
+                                                   </children>
+                                                   <effect>
+                                                      <GaussianBlur />
+                                                   </effect>
+                                                </HBox>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </padding>
+                                          </VBox>
+                                          <VBox alignment="CENTER_LEFT" layoutX="571.0" layoutY="10.0" prefHeight="142.0" prefWidth="201.0">
+                                             <children>
+                                                <CheckBox fx:id="bbqChicken" mnemonicParsing="false" onAction="#handleCheckBox" text="BBQ Chicken" textFill="WHITE" underline="true">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </CheckBox>
+                                                <HBox fx:id="bbqChickenHBox" disable="true" prefHeight="96.0" prefWidth="164.0">
+                                                   <children>
+                                                      <VBox alignment="CENTER_LEFT" prefHeight="105.0" prefWidth="82.0" spacing="10.0">
+                                                         <children>
+                                                            <Label text="Crust Size" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="48.0" layoutY="37.0" text="Crust Type" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="27.0" layoutY="86.0" text="Quantity" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                         <padding>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </padding>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER" prefHeight="105.0" prefWidth="113.0" spacing="5.0">
+                                                         <children>
+                                                            <ChoiceBox fx:id="bbqcSize" prefWidth="150.0" />
+                                                            <ChoiceBox fx:id="bbqcType" prefWidth="150.0" />
+                                                            <ChoiceBox fx:id="bbqcQnty" layoutX="10.0" layoutY="48.0" prefWidth="150.0" />
+                                                         </children>
+                                                         <padding>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </padding>
+                                                      </VBox>
+                                                   </children>
+                                                   <effect>
+                                                      <GaussianBlur />
+                                                   </effect>
+                                                </HBox>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </padding>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox alignment="CENTER" prefHeight="269.0" prefWidth="643.0">
+                                             <children>
+                                                <CheckBox fx:id="customPizza" mnemonicParsing="false" onAction="#handleCheckBox" prefHeight="0.0" prefWidth="139.0" text="Custom Pizza" textFill="WHITE" underline="true">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                   <padding>
+                                                      <Insets top="10.0" />
+                                                   </padding>
+                                                </CheckBox>
+                                                <HBox fx:id="CustomPizzaHBox" alignment="CENTER" disable="true" prefHeight="115.0" prefWidth="673.0" spacing="5.0">
+                                                   <children>
+                                                      <HBox prefHeight="106.0" prefWidth="399.0">
+                                                         <children>
+                                                            <VBox alignment="CENTER_LEFT" prefHeight="105.0" prefWidth="82.0" spacing="10.0">
+                                                               <children>
+                                                                  <Label text="Crust Size" textFill="WHITE">
+                                                                     <font>
+                                                                        <Font size="14.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                                  <Label layoutX="48.0" layoutY="37.0" text="Crust Type" textFill="WHITE">
+                                                                     <font>
+                                                                        <Font size="14.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                                  <Label layoutX="27.0" layoutY="86.0" text="Quantity" textFill="WHITE">
+                                                                     <font>
+                                                                        <Font size="14.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </children>
+                                                               <padding>
+                                                                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                               </padding>
+                                                            </VBox>
+                                                            <VBox alignment="CENTER" prefHeight="105.0" prefWidth="113.0" spacing="5.0">
+                                                               <children>
+                                                                  <ChoiceBox fx:id="cpSize" prefWidth="150.0" />
+                                                                  <ChoiceBox fx:id="cpType" prefWidth="150.0" />
+                                                                  <ChoiceBox fx:id="cpQnty" layoutX="10.0" layoutY="48.0" prefWidth="150.0" />
+                                                               </children>
+                                                               <padding>
+                                                                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                               </padding>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                      <VBox alignment="CENTER" layoutX="389.0" layoutY="10.0" prefHeight="106.0" prefWidth="595.0" spacing="10.0">
+                                                         <children>
+                                                            <Label text="Toppings" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <HBox alignment="CENTER_LEFT" prefHeight="27.0" prefWidth="326.0" spacing="10.0">
+                                                               <children>
+                                                                  <CheckBox fx:id="Pepperoni" mnemonicParsing="false" onAction="#handleCheckBox" text="Pepperoni" textFill="WHITE" />
+                                                                  <CheckBox fx:id="Mushrooms" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleCheckBox" text="Mushrooms" textFill="WHITE" />
+                                                                  <CheckBox fx:id="Onions" layoutX="56.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleCheckBox" text="Onions" textFill="WHITE" />
+                                                                  <CheckBox fx:id="Sausage" layoutX="71.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleCheckBox" text="Sausage" textFill="WHITE" />
+                                                               </children>
+                                                               <padding>
+                                                                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                               </padding>
+                                                            </HBox>
+                                                            <HBox alignment="CENTER_LEFT" layoutX="15.0" layoutY="63.0" prefHeight="34.0" prefWidth="358.0" spacing="10.0">
+                                                               <children>
+                                                                  <CheckBox fx:id="Bacon" mnemonicParsing="false" onAction="#handleCheckBox" text="Bacon" textFill="WHITE" />
+                                                                  <CheckBox fx:id="eCheese" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleCheckBox" text="Extra Cheese" textFill="WHITE" />
+                                                                  <CheckBox fx:id="Olives" layoutX="56.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleCheckBox" text="Olives" textFill="WHITE" />
+                                                                  <CheckBox fx:id="gPeppers" layoutX="71.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleCheckBox" text="Green Peppers" textFill="WHITE" />
+                                                               </children>
+                                                               <padding>
+                                                                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                               </padding>
+                                                            </HBox>
+                                                         </children>
+                                                         <padding>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </padding>
+                                                      </VBox>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets left="5.0" right="5.0" />
+                                                   </padding>
+                                                   <effect>
+                                                      <GaussianBlur />
+                                                   </effect>
+                                                </HBox>
+                                                <HBox alignment="CENTER" prefHeight="26.0" prefWidth="858.0">
+                                                   <children>
+                                                      <Label text="Drinks" textFill="WHITE" underline="true">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                                                   <children>
+                                                      <VBox alignment="CENTER_LEFT" prefHeight="98.0" prefWidth="150.0" spacing="5.0">
+                                                         <children>
+                                                            <CheckBox fx:id="cocaCola" mnemonicParsing="false" onAction="#handleCheckBox" text="Coca Cola" textFill="WHITE" underline="true">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </CheckBox>
+                                                            <HBox fx:id="cocaColaHBox" alignment="CENTER" disable="true" layoutX="20.0" layoutY="45.0" prefHeight="100.0" prefWidth="200.0">
+                                                               <children>
+                                                                  <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                                                                     <children>
+                                                                        <Label text="Size" textFill="WHITE">
+                                                                           <font>
+                                                                              <Font size="14.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                        <Label text="Quantity" textFill="WHITE">
+                                                                           <font>
+                                                                              <Font size="14.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                     </children>
+                                                                     <padding>
+                                                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                                     </padding>
+                                                                  </VBox>
+                                                                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+                                                                     <children>
+                                                                        <ChoiceBox fx:id="ccSize" prefHeight="26.0" prefWidth="93.0" />
+                                                                        <ChoiceBox fx:id="ccQnty" prefHeight="26.0" prefWidth="93.0" />
+                                                                     </children>
+                                                                     <padding>
+                                                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                                     </padding>
+                                                                  </VBox>
+                                                               </children>
+                                                               <effect>
+                                                                  <GaussianBlur />
+                                                               </effect>
+                                                            </HBox>
+                                                         </children>
+                                                         <padding>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </padding>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER_LEFT" layoutX="232.0" layoutY="10.0" prefHeight="98.0" prefWidth="150.0" spacing="5.0">
+                                                         <children>
+                                                            <CheckBox fx:id="Sprite" mnemonicParsing="false" onAction="#handleCheckBox" text="Sprite" textFill="WHITE" underline="true">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </CheckBox>
+                                                            <HBox fx:id="SpriteHBox" alignment="CENTER" disable="true" layoutX="20.0" layoutY="45.0" prefHeight="100.0" prefWidth="200.0">
+                                                               <children>
+                                                                  <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                                                                     <children>
+                                                                        <Label text="Size" textFill="WHITE">
+                                                                           <font>
+                                                                              <Font size="14.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                        <Label text="Quantity" textFill="WHITE">
+                                                                           <font>
+                                                                              <Font size="14.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                     </children>
+                                                                     <padding>
+                                                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                                     </padding>
+                                                                  </VBox>
+                                                                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+                                                                     <children>
+                                                                        <ChoiceBox fx:id="spSize" prefHeight="26.0" prefWidth="93.0" />
+                                                                        <ChoiceBox fx:id="spQnty" prefHeight="26.0" prefWidth="93.0" />
+                                                                     </children>
+                                                                     <padding>
+                                                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                                     </padding>
+                                                                  </VBox>
+                                                               </children>
+                                                               <effect>
+                                                                  <GaussianBlur />
+                                                               </effect>
+                                                            </HBox>
+                                                         </children>
+                                                         <padding>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </padding>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER_LEFT" layoutX="564.0" layoutY="10.0" prefHeight="98.0" prefWidth="150.0" spacing="5.0">
+                                                         <children>
+                                                            <CheckBox fx:id="Fanta" mnemonicParsing="false" onAction="#handleCheckBox" text="Fanta" textFill="WHITE" underline="true">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </CheckBox>
+                                                            <HBox fx:id="FantaHBox" alignment="CENTER" disable="true" layoutX="20.0" layoutY="45.0" prefHeight="100.0" prefWidth="200.0">
+                                                               <children>
+                                                                  <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                                                                     <children>
+                                                                        <Label text="Size" textFill="WHITE">
+                                                                           <font>
+                                                                              <Font size="14.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                        <Label text="Quantity" textFill="WHITE">
+                                                                           <font>
+                                                                              <Font size="14.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                     </children>
+                                                                     <padding>
+                                                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                                     </padding>
+                                                                  </VBox>
+                                                                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+                                                                     <children>
+                                                                        <ChoiceBox fx:id="fSize" prefHeight="26.0" prefWidth="93.0" />
+                                                                        <ChoiceBox fx:id="fQnty" prefHeight="26.0" prefWidth="93.0" />
+                                                                     </children>
+                                                                     <padding>
+                                                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                                     </padding>
+                                                                  </VBox>
+                                                               </children>
+                                                               <effect>
+                                                                  <GaussianBlur />
+                                                               </effect>
+                                                            </HBox>
+                                                         </children>
+                                                         <padding>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </padding>
+                                                      </VBox>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="CENTER" prefHeight="269.0" prefWidth="345.0">
+                                             <children>
+                                                <Label text="Review Order" textFill="WHITE" underline="true">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <ScrollPane prefHeight="224.0" prefWidth="210.0">
+                                                   <padding>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </padding>
+                                                   <content>
+                                                      <VBox fx:id="reviewOrderVBox" prefHeight="58.0" prefWidth="222.0">
+                                                         <children>
+                                                            <Label fx:id="completeOrder" wrapText="true">
+                                                               <font>
+                                                                  <Font size="11.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label fx:id="taxLabel" layoutX="10.0" layoutY="10.0" wrapText="true">
+                                                               <font>
+                                                                  <Font size="11.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </VBox>
+                                                   </content>
+                                                </ScrollPane>
+                                                <ToolBar prefHeight="0.0" prefWidth="292.0">
+                                                   <items>
+                                                      <StackPane prefHeight="20.0" prefWidth="254.0">
+                                                         <children>
+                                                            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                                               <children>
+                                                                  <Label fx:id="totalLabel" text="Total: $0.00" />
+                                                               </children>
+                                                               <StackPane.margin>
+                                                                  <Insets />
+                                                               </StackPane.margin>
+                                                               <padding>
+                                                                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                                               </padding>
+                                                            </HBox>
+                                                            <HBox alignment="CENTER_RIGHT" prefHeight="28.0" prefWidth="263.0">
+                                                               <children>
+                                                                  <Button fx:id="Clear" mnemonicParsing="false" onAction="#Clear" text="Clear">
+                                                                     <font>
+                                                                        <Font size="10.0" />
+                                                                     </font>
+                                                                  </Button>
+                                                               </children>
+                                                               <padding>
+                                                                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                                               </padding>
+                                                            </HBox>
+                                                         </children>
+                                                      </StackPane>
+                                                   </items>
+                                                </ToolBar>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </padding>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="18.0" prefWidth="858.0" spacing="20.0">
+                                       <children>
+                                          <Button fx:id="addSelected" mnemonicParsing="false" onAction="#AddSelected" text="Add Selected">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="Purchase" disable="true" mnemonicParsing="false" onAction="#Purchase" text="Purchase">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="Cancel" layoutX="458.0" layoutY="15.0" mnemonicParsing="false" onAction="#Cancel" text="Cancel">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                     <graphic>
+                        <Label text="New Order">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </graphic>
+                </Tab>
+                  <Tab>
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="607.0" prefWidth="1283.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <TableView fx:id="table" prefHeight="200.0" prefWidth="200.0" tableMenuButtonVisible="true" VBox.vgrow="ALWAYS">
+                                      <columns>
+                                        <TableColumn fx:id="col_date" prefWidth="75.0" text="Date" />
+                                        <TableColumn fx:id="col_phone" prefWidth="66.933349609375" text="Phone" />
+                                          <TableColumn fx:id="col_last_name" prefWidth="184.26661682128906" text="Last Name" />
+                                          <TableColumn fx:id="col_street" prefWidth="75.0" text="Street" />
+                                          <TableColumn fx:id="col_city" prefWidth="75.0" text="City" />
+                                          <TableColumn fx:id="col_state" prefWidth="75.0" text="State" />
+                                          <TableColumn fx:id="col_order_type" prefWidth="75.0" text="Order Type" />
+                                          <TableColumn fx:id="col_order" prefWidth="75.0" text="Order" />
+                                          <TableColumn fx:id="col_total" prefWidth="75.0" text="Total" />
+                                          <TableColumn fx:id="col_note" prefWidth="75.0" text="Note" />
+                                      </columns>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                                       </VBox.margin>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                           </children></AnchorPane>
+                     </content>
+                     <graphic>
+                        <Label text="All Orders">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </graphic>
+                  </Tab>
+              </tabs>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </TabPane>
+         </center>
+         <top>
+            <VBox alignment="CENTER" prefHeight="43.0" prefWidth="753.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="The Pie Guys" textAlignment="CENTER">
+                     <font>
+                        <Font name="Sylfaen" size="36.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </VBox>
+         </top>
+         <effect>
+            <ColorAdjust brightness="0.4" contrast="0.15">
+               <input>
+                  <Blend />
+               </input>
+            </ColorAdjust>
+         </effect>
+      </BorderPane>
+   </children>
+</StackPane>
